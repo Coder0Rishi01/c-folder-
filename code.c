@@ -1,154 +1,109 @@
-# include <stdio.h>
-# include <math.h>
+#include<stdio.h>
 
-                // Type Declaration Instructions (Chapter - 2)
+                                    // Conditional Statement (Chapter - 3)
+
 
 // int main() {
-//     int a = 22;
-//     int b = a;
-//     int c = b + 1;
-//     int d =  1,e;
+//     int age;
+//     printf("enter age : ");
+//     scanf("%d", &age);
 
-//     int oldAge = 22;
-//     int years = 2;
-//     int newAge =  oldAge + years;
+//     if(age > 18) {
+//         printf("You are adult \n");
+//         printf("They can vote \n");
+//         printf("They can drive \n"); 
+//     }
+//      else {
+//         printf("not adult \n");
+//     }
+
+//     printf("Thank you \n");
+//     return 0;
+// }
+
+        // uses else if 
+
+// int main() {
+//     int age;
+//     printf("Enter age : ");
+//     scanf("%d", &age);
+
+//     if(age >= 18) {
+//         printf("adult \n");
+//     } else if(age > 13 && age < 18) {
+//         printf("teenager \n");
+//     } else {
+//         printf("child \n");
+//     }
 
 //     return 0;
 // }
 
 
-                // Arithmetic Instruction 
+                    // Ternary Opertors
 
 // int main() {
-//     // int a = 1, b = 2;
-//     // int sum = a + b;
-//     // int multiply = a * b;
-//     // int x, y = a * b; 
-//     int b, c;
-//     b = c = 1;
-//     // int b + c = a; // Invalid 
-//     int a = b + c; // valid 
-//     int power = pow(b,c);
-//     printf("%d", power);
-//     return 0; 
-// } 
+//     int age;
+//     printf("Enter age : ");
+//     scanf("%d", &age);
 
-
-            // Type Conversion
-
-// int main() {
-//     printf("%d \n", 2 * 2);
-//     printf("%f \n", 2.0 * 2);
-
-
-//     return 0;
-// }
-
-//  Practice Qs 3.
-
-// int main() {
-//     int a = (int) 1.999999;
-//     printf("%d \n", a);
+//     age >= 18 ? printf("adult \n") : printf("not adult \n");
 
 //     return 0;
 // }
 
 
-                    // Operator Precedence 
+                    // Switch 
 
 // int main() {
-//     int x = 4 + 9 * 10;
-//     int a = 4 * 3 / 6 * 2;
-//     printf("%d \n", x);
-//     printf("%d \n", a);
+//     int day; // 1- monday, 2 - tues; 3- wed
+//     printf("Enter day(1-7) : ");
+//     scanf("%d", &day);
+
+//     switch(day) {
+//         case 1 : printf("monday \n");
+//                 break;
+//         case 2 : printf("tuesday \n");
+//                 break;
+//         case 3 : printf("wednesday \n");
+//                 break;
+//         case 4 : printf("thursday \n");
+//                 break;
+//         case 5 : printf("friday \n");
+//                 break;
+//         case 6 : printf("saturday \n");
+//                 break;
+//         case 7 : printf("sunday \n");
+//                 break;
+//         default : printf("not a valid day! \n");
+        
+//     }
 
 //     return 0;
 // }
 
 
-                // Practice Qs 4
-
-// int main() {
-//     int a = 5*2-2*3;
-//     int b = 5*2 / 2*3;
-//     int c = 5 * (2/2) * 3;
-//     int d = 5 + 2 / 2 * 3;
-
-//     printf("%d \n", a);
-//     printf("%d \n", b);
-//     printf("%d \n", c);
-//     printf("%d \n", d);
-
-//     return 0;
-
-// }
-
-
-                    // Practice Qs 5
-
-
-// WAP to check if a number is divisible by 2 or not. 
-
-// int main() {
-//     // even -> 1 // Practice Qs 6
-//     // odd -> 0
-
-//     int x;
-//     printf("enter a number : ");
-//     scanf("%d", &x);
-
-//     printf("%d \n", x % 2 == 0);
-//     return 0;
-// }
-
-
-                            // Practice Qs 7
-
-// int main() {
-//     int x; int y = x; // valid
-//     // int x,y = x;  invlid
-//     // char stars = '**'; invlid 
-//     printf("%d", 8^8);
-
-//     return 0;
-// }
-
-
-                    // Practice Qs 8
-
-// A. if it's sunday & it's snowing -> true  
-
-// int main() {
-//     int isSunday = 1;
-//     int isSnowing = 1;
-//     printf("%d \n", isSunday && isSnowing);
-
-//     return 0;
-// }
-
-
-// B. if ti's monday or it's raining -> true 
- 
-// int main() {
-//     int isMonday = 0;
-//     int isRaining = 1;
-
-//     printf("%d \n", isMonday || isRaining);
-
-//     return 0;
-// }
-
-
-
-// C. if a number is greater than 9 & less than 100 -> true (2 digit number) 
+                                // Nested  switch 
 
 
 int main() {
-    int x;
-    printf("enter number : ");
-    scanf("%d", &x);
+        int number;
+        printf("Enter number : ");
+        scanf("%d", &number);
 
-    printf("%d \n", x>9 && x<100);
+        
+        if(number >= 0) {
+                printf("positive \n");
+               
+                if(number % 2 == 0) {
+                        printf("even \n");
+                } else {
+                        printf("odd \n");
+                }
 
-    return 0;
+        } else {
+                printf("negative ");
+        }
+
+        return 0;
 }
